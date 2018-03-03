@@ -6,7 +6,11 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
+// This function maps the URLs to route handlers
 Router.map(function() {
+  this.route('about'); // for /about
+  this.route('contact'); // for /contact
+  this.route('rentals');
 });
 
 export default Router;
