@@ -1,0 +1,21 @@
+<article class="listing">
+  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{rental.image}}" alt="">
+	<small>View Larger</small>
+  </a>
+  <h3>{{rental.title}}</h3>
+  <div class="detail owner">
+    <span>Owner:</span> {{rental.owner}}
+  </div>
+  <div class="detail type">
+	<!-- Using a helper, we can add arguments as items following the name of the helper, for example rental.category as an argument for rental-property-type.
+	All of the arguments following will be turned into an array, which is why the helper takes an array and destructures each item -->
+    <span>Type:</span> {{rental-property-type rental.category}} - {{rental.category}}
+  </div>
+  <div class="detail location">
+    <span>Location:</span> {{rental.city}}
+  </div>
+  <div class="detail bedrooms">
+    <span>Number of bedrooms:</span> {{rental.bedrooms}}
+  </div>
+</article>
