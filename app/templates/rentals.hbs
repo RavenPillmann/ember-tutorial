@@ -7,6 +7,7 @@
   {{/link-to}}
 </div>
 
-{{#each model as |rentalUnit|}}
-  {{rental-listing rental=rentalUnit}}
-{{/each}}
+<!-- This outlet allows us to display active nexted routes.
+Having a parent route (in this case, /rentals) means all of that parent information
+Can be passed down, which allows for headers/footers/etc-->
+{{outlet}}
